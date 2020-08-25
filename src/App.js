@@ -2,12 +2,25 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { Switch, Route } from "react-router-dom";
+
 import RequestTester from "./RequestTester";
 
 function App() {
   return (
     <>
     <RequestTester />
+    <Switch>
+      <Route path="/a">
+        <div>route A</div>
+      </Route>
+      <Route path="/b">
+        <div>route B</div>
+      </Route>
+      <Route>
+        <div>unknown route</div>
+      </Route>
+    </Switch>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

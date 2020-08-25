@@ -7,12 +7,16 @@ const BASE_URL = "/api";
 const handleError = (err) => console.log("request error", err);
 
 export const simpleGet = () => {
-    return axios.get(`${BASE_URL}/test`)
+    const path = `${BASE_URL}/test`;
+    console.log("API PATH", path);
+    return axios.get(path)
     .catch(handleError);
 };
 
 export const simplePost = (obj) => {
     console.log("check obj", obj);
-    return axios.post(`${BASE_URL}/test`, obj)
+    const path = `${BASE_URL}/test`;
+    console.log("API PATH", path);
+    return axios.post(path, obj)
     .catch(handleError);
 };

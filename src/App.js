@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 import RequestTester from "./RequestTester";
 
@@ -10,6 +10,8 @@ function App() {
   return (
     <>
     <RequestTester />
+    <Link to="/a">Goto A</Link>
+    <Link to="/b">Goto B</Link>
     <Switch>
       <Route path="/a">
         <div>route A</div>
